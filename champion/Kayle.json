@@ -8,7 +8,7 @@
   ],
   "forms": [
     {
-      "name": "level 16",
+      "name": "Level 1",
       "icon": "Kayle",
       "skills": [
         {
@@ -555,7 +555,7 @@
       }
     },
     {
-      "name": "level 11",
+      "name": "Level 6",
       "icon": "Kayle",
       "skills": [
         {
@@ -1102,7 +1102,7 @@
       }
     },
     {
-      "name": "level 6",
+      "name": "Level 11",
       "icon": "Kayle",
       "skills": [
         {
@@ -1649,7 +1649,7 @@
       }
     },
     {
-      "name": "level 1",
+      "name": "Level 16",
       "icon": "Kayle",
       "skills": [
         {
