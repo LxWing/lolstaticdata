@@ -7,7 +7,7 @@
   ],
   "forms": [
     {
-      "name": "Spider",
+      "name": "Human",
       "icon": "Elise",
       "skills": [
         {
@@ -514,7 +514,7 @@
       }
     },
     {
-      "name": "Human",
+      "name": "Spider",
       "icon": "Elise",
       "skills": [
         {

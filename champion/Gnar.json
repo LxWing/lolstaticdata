@@ -7,7 +7,7 @@
   ],
   "forms": [
     {
-      "name": "Mega",
+      "name": "Mini",
       "icon": "Gnar",
       "skills": [
         {
@@ -564,7 +564,7 @@
       }
     },
     {
-      "name": "Mini",
+      "name": "Mega",
       "icon": "Gnar",
       "skills": [
         {
