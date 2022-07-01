@@ -8,7 +8,7 @@
   }
   
   interface ChampionForm {
-    transform: any;
+    transform: any; // this will contain transform conditions that automate the change in case of iChampion.transform == 'condition' || 'skill'
     name: string;
     icon: string;
     skills: ChampionSkill[];
