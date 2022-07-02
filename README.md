@@ -20,8 +20,8 @@ W is in Khazix.json -> forms[0] -> skills[1] -> components[0],
 evolvedW is in Khazix.json -> forms[0] -> skills[1] -> components[1]
 
 
-Nidalee W:
+Nidalee E:
 
-human W  is in Nidalee -> forms[0] -> skills[1] -> components[0]
+human E  is in Nidalee.json -> forms[0] -> skills[1] -> components[0]
 
-cat W is in Nidalee -> forms[1] -> skills[2] -> components[0]
+cat E is in Nidalee.json -> forms[1] -> skills[1] -> components[0]
