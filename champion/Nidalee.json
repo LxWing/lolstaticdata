@@ -26,7 +26,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Javelin Toss \/ Takedown",
+                            "name": "Javelin Toss",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee throws her javelin, dealing <magicDamage>@HumanMinimumDamage@ magic damage<\/magicDamage>, increased up to <magicDamage>@HumanMaximumDamage@ magic damage<\/magicDamage> based on distance flown.",
                             "scaling": [
@@ -134,7 +134,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Bushwhack \/ Pounce",
+                            "name": "Bushwhack",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee places an invisible trap for 2 minutes. When an enemy walks over it, they are dealt <magicDamage>@DamagePerSecond@ magic damage<\/magicDamage> per second for @Effect3Amount@ seconds.<br><br>@MaxTraps@ traps may be active at once.",
                             "scaling": [
@@ -247,7 +247,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Primal Surge \/ Swipe",
+                            "name": "Primal Surge",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee restores <healing>@TotalHealing@ Health<\/healing> increased up to <healing>@MaxHealing@<\/healing> based on missing Health and grants them <attackSpeed>@BonusAS*100@% Attack Speed<\/attackSpeed> for@ASDuration@ seconds.",
                             "scaling": [
@@ -552,7 +552,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Javelin Toss \/ Takedown",
+                            "name": "Takedown",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee throws her javelin, dealing <magicDamage>@HumanMinimumDamage@ magic damage<\/magicDamage>, increased up to <magicDamage>@HumanMaximumDamage@ magic damage<\/magicDamage> based on distance flown.",
                             "scaling": [
@@ -660,7 +660,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Bushwhack \/ Pounce",
+                            "name": "Pounce",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee places an invisible trap for 2 minutes. When an enemy walks over it, they are dealt <magicDamage>@DamagePerSecond@ magic damage<\/magicDamage> per second for @Effect3Amount@ seconds.<br><br>@MaxTraps@ traps may be active at once.",
                             "scaling": [
@@ -773,7 +773,7 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Primal Surge \/ Swipe",
+                            "name": "Swipe",
                             "conditions": [],
                             "description": "<keywordMajor>Human Form:<\/keywordMajor> Nidalee restores <healing>@TotalHealing@ Health<\/healing> increased up to <healing>@MaxHealing@<\/healing> based on missing Health and grants them <attackSpeed>@BonusAS*100@% Attack Speed<\/attackSpeed> for@ASDuration@ seconds.",
                             "scaling": [
