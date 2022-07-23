@@ -1,15 +1,14 @@
 {
-    "id": 246,
-    "name": "Qiyana",
-    "key": "Qiyana",
+    "id": 895,
+    "name": "Nilah",
+    "key": "Nilah",
     "roles": [
-        "mid",
-        "jungle"
+        "bot"
     ],
     "forms": [
         {
             "name": "",
-            "icon": "Qiyana",
+            "icon": "Nilah",
             "skills": [
                 {
                     "key": "A",
@@ -110,9 +109,9 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Royal Privilege",
+                            "name": "Joy Unending",
                             "conditions": [],
-                            "description": "Qiyana's first basic attack or ability against each enemy deals bonus damage.",
+                            "description": "Nilah gains increased experience from last-hitting minions along with the ability to enhance and share nearby healing and shielding from her allies.",
                             "scaling": [],
                             "cost": {
                                 "label": "",
@@ -121,8 +120,20 @@
                             },
                             "range": {
                                 "label": "Range",
-                                "formula": "0",
-                                "components": []
+                                "formula": "1000 + @gameplayRadius@",
+                                "components": [
+                                    {
+                                        "label": "gameplayRadius",
+                                        "value": [
+                                            1
+                                        ],
+                                        "scaling": [
+                                            "self",
+                                            "gameplayRadius",
+                                            "total"
+                                        ]
+                                    }
+                                ]
                             },
                             "cooldown": {
                                 "label": "Cooldown",
@@ -148,37 +159,37 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Elemental Wrath \/ Edge of Ixtal",
+                            "name": "Formless Blade",
                             "conditions": [],
-                            "description": "If Qiyana does not have an <keywordMajor>Enchantment<\/keywordMajor>, she slashes, dealing <physicalDamage>@VanillaDamage@ physical damage<\/physicalDamage> to enemies in a small area. If she does, this Ability gains extra range and an additional effect based on the type of <keywordMajor>Enchantment<\/keywordMajor>:<li><keywordMajor>Ice Enchantment<\/keywordMajor>: Briefly <status>Roots<\/status>, then <status>Slows<\/status> by @SlowPotency*-100@% for @SlowDuration@ second.<li><keywordMajor>Rock Enchantment<\/keywordMajor>: Deals an additional <physicalDamage>@TremorDamage@ physical damage<\/physicalDamage> to units below @CritThreshold*100@% Health.<li><keywordMajor>Wild Enchantment<\/keywordMajor>: Leaves a trail that turns Qiyana <keywordStealth>Invisible<\/keywordStealth> and grants <speed>@Haste*100@% Move Speed<\/speed>.<br>",
+                            "description": "<spellPassive>Passive:<\/spellPassive> Nilah gains @CritArmorPen@ Armor Penetration, and her Attacks against champions restore <healing>@CritLifesteal@ damage dealt as Health<\/healing>. Overhealing from this is converted into a <shield>Shield<\/shield> for 6 seconds.<br><br><spellActive>Active:<\/spellActive> Nilah cracks her whip-blade, dealing <physicalDamage>@DamageCalc@ physical damage<\/physicalDamage>, increased by her Critical Strike Chance. If an enemy unit or structure is hit, Nilah gains 125 Attack Range and <attackSpeed>@BonusAttackSpeedCalc@% Attack Speed<\/attackSpeed>, and her Attacks hit in a cone as <physicalDamage>@AttackTotalDamageTooltip@ physical damage<\/physicalDamage> for 4 seconds.<br>@SpellModifierDescriptionAppend@",
                             "scaling": [
                                 {
-                                    "label": "VanillaDamage",
+                                    "label": "CritArmorPen",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "SlowPotency",
+                                    "label": "CritLifesteal",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "SlowDuration",
+                                    "label": "DamageCalc",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "TremorDamage",
+                                    "label": "BonusAttackSpeedCalc",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "CritThreshold",
+                                    "label": "AttackTotalDamageTooltip",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "Haste",
+                                    "label": "SpellModifierDescriptionAppend",
                                     "formula": "@base@",
                                     "components": []
                                 }
@@ -190,11 +201,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            35,
-                                            35,
-                                            35,
-                                            35,
-                                            35
+                                            30,
+                                            30,
+                                            30,
+                                            30,
+                                            30
                                         ],
                                         "scaling": [
                                             "self",
@@ -206,21 +217,32 @@
                             },
                             "range": {
                                 "label": "Range",
-                                "formula": "@base@",
+                                "formula": "@base@ + @gameplayRadius@",
                                 "components": [
                                     {
                                         "label": "base",
                                         "value": [
-                                            525,
-                                            525,
-                                            525,
-                                            525,
-                                            525
+                                            600,
+                                            600,
+                                            600,
+                                            600,
+                                            600
                                         ],
                                         "scaling": [
                                             "self",
                                             "skillLevelQ",
                                             "current"
+                                        ]
+                                    },
+                                    {
+                                        "label": "gameplayRadius",
+                                        "value": [
+                                            1
+                                        ],
+                                        "scaling": [
+                                            "self",
+                                            "gameplayRadius",
+                                            "total"
                                         ]
                                     }
                                 ]
@@ -232,11 +254,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            7,
-                                            7,
-                                            7,
-                                            7,
-                                            7
+                                            4,
+                                            4,
+                                            4,
+                                            4,
+                                            4
                                         ],
                                         "scaling": [
                                             "self",
@@ -276,22 +298,32 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Terrashape",
+                            "name": "Jubilant Veil",
                             "conditions": [],
-                            "description": "<spellPassive>Passive:<\/spellPassive> While Qiyana's weapon is <keywordMajor>Enchanted<\/keywordMajor>, she gains <attackSpeed>@AttackSpeed*100@% Attack Speed<\/attackSpeed> and her Attacks deal an additional <magicDamage>@OnHitDamage@ magic damage<\/magicDamage>. She also gains <speed>@PassiveMS*100@% Move Speed<\/speed> while out of combat near the corresponding terrain type.<br><br><spellActive>Active:<\/spellActive> Qiyana dashes towards a nearby brush, terrain, or river and <keywordMajor>Enchants<\/keywordMajor> her weapon with that particular terrain type. This refreshes <spellName>Elemental Wrath \/ Edge of Ixtal<\/spellName>'s Cooldown.",
+                            "description": "Nilah envelops herself in mist for @BaseDuration@ seconds, becoming Ghosted, gaining <speed>@MoveSpeedPercent*100@% Move Speed<\/speed>, dodging Attacks, and reducing <magicDamage>magic damage<\/magicDamage> taken by @MagicDamageReduction*100@%.<br><br>While active, touching allied champions envelops them in mist, granting the same benefits for @ShareBaseDuration@ seconds.<br>@SpellModifierDescriptionAppend@",
                             "scaling": [
                                 {
-                                    "label": "AttackSpeed",
+                                    "label": "BaseDuration",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "OnHitDamage",
+                                    "label": "MoveSpeedPercent",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "PassiveMS",
+                                    "label": "MagicDamageReduction",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "ShareBaseDuration",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "SpellModifierDescriptionAppend",
                                     "formula": "@base@",
                                     "components": []
                                 }
@@ -303,11 +335,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            25,
+                                            60,
+                                            45,
                                             30,
-                                            35,
-                                            40,
-                                            45
+                                            15,
+                                            0
                                         ],
                                         "scaling": [
                                             "self",
@@ -319,21 +351,32 @@
                             },
                             "range": {
                                 "label": "Range",
-                                "formula": "@base@",
+                                "formula": "@base@ + @gameplayRadius@",
                                 "components": [
                                     {
                                         "label": "base",
                                         "value": [
-                                            1100,
-                                            1100,
-                                            1100,
-                                            1100,
-                                            1100
+                                            150,
+                                            150,
+                                            150,
+                                            150,
+                                            150
                                         ],
                                         "scaling": [
                                             "self",
                                             "skillLevelW",
                                             "current"
+                                        ]
+                                    },
+                                    {
+                                        "label": "gameplayRadius",
+                                        "value": [
+                                            1
+                                        ],
+                                        "scaling": [
+                                            "self",
+                                            "gameplayRadius",
+                                            "total"
                                         ]
                                     }
                                 ]
@@ -345,11 +388,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            7,
-                                            7,
-                                            7,
-                                            7,
-                                            7
+                                            26,
+                                            25,
+                                            24,
+                                            23,
+                                            22
                                         ],
                                         "scaling": [
                                             "self",
@@ -389,12 +432,17 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Audacity",
+                            "name": "Slipstream",
                             "conditions": [],
-                            "description": "Qiyana dashes through an enemy and deals <physicalDamage>@Damage@ physical damage<\/physicalDamage> to them.",
+                            "description": "Nilah dashes through a unit, dealing <physicalDamage>@DashDamage@ physical damage<\/physicalDamage> to any enemies she passes through.@SpellModifierDescriptionAppend@",
                             "scaling": [
                                 {
-                                    "label": "Damage",
+                                    "label": "DashDamage",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "SpellModifierDescriptionAppend",
                                     "formula": "@base@",
                                     "components": []
                                 }
@@ -407,10 +455,10 @@
                                         "label": "base",
                                         "value": [
                                             40,
-                                            45,
-                                            50,
-                                            55,
-                                            60
+                                            40,
+                                            40,
+                                            40,
+                                            40
                                         ],
                                         "scaling": [
                                             "self",
@@ -427,11 +475,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            650,
-                                            650,
-                                            650,
-                                            650,
-                                            650
+                                            550,
+                                            550,
+                                            550,
+                                            550,
+                                            550
                                         ],
                                         "scaling": [
                                             "self",
@@ -448,11 +496,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            12,
-                                            11,
-                                            10,
-                                            9,
-                                            8
+                                            0.5,
+                                            0.5,
+                                            0.5,
+                                            0.5,
+                                            0.5
                                         ],
                                         "scaling": [
                                             "self",
@@ -490,22 +538,42 @@
                     "transform": "none",
                     "components": [
                         {
-                            "name": "Supreme Display of Talent",
+                            "name": "Apotheosis",
                             "conditions": [],
-                            "description": "Qiyana launches a shockwave that <status>Knocks Back<\/status> enemies and detonates when it hits terrain. The explosion follows the entire edge of the terrain, <status>Stunning<\/status> for between 0.5 and @StunDuration@ seconds and dealing <physicalDamage>@Damage@<\/physicalDamage> plus <physicalDamage>@MissingHealthDamageRock@ max Health physical damage<\/physicalDamage>. <status>Stun<\/status> duration scales down with distance the shockwave has travelled.<br><br>Any river or brush the shockwave passes through also explode after a delay for the same damage and <status>Stun<\/status>.",
+                            "description": "Nilah whirls her whip-blade, dealing <physicalDamage>@DamagePerTickCalcTooltip@ physical damage<\/physicalDamage> over 1 second, then finishes with a burst of <physicalDamage>@DamageCalc@ physical damage<\/physicalDamage> that also <status>Pulls<\/status> nearby enemies toward her.<br><br>Nilah heals herself and nearby allies by <healing>@ChampHealingPercent*100@% + @spell.NilahQ:CritLifesteal@ of her damage dealt to enemy champions' Health (@OtherHealingPercent*100@% for non-champions)<\/healing>, converting any overhealing into a <shield>Shield<\/shield> for @Duration@ seconds.<br>@SpellModifierDescriptionAppend@",
                             "scaling": [
                                 {
-                                    "label": "StunDuration",
+                                    "label": "DamagePerTickCalcTooltip",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "Damage",
+                                    "label": "DamageCalc",
                                     "formula": "@base@",
                                     "components": []
                                 },
                                 {
-                                    "label": "MissingHealthDamageRock",
+                                    "label": "ChampHealingPercent",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "spell",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "OtherHealingPercent",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "Duration",
+                                    "formula": "@base@",
+                                    "components": []
+                                },
+                                {
+                                    "label": "SpellModifierDescriptionAppend",
                                     "formula": "@base@",
                                     "components": []
                                 }
@@ -517,11 +585,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            100,
-                                            100,
-                                            100,
-                                            100,
-                                            100
+                                            80,
+                                            80,
+                                            80,
+                                            80,
+                                            80
                                         ],
                                         "scaling": [
                                             "self",
@@ -538,11 +606,11 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            950,
-                                            950,
-                                            950,
-                                            950,
-                                            950
+                                            450,
+                                            450,
+                                            450,
+                                            450,
+                                            450
                                         ],
                                         "scaling": [
                                             "self",
@@ -559,11 +627,9 @@
                                     {
                                         "label": "base",
                                         "value": [
-                                            120,
-                                            120,
-                                            120,
-                                            120,
-                                            120
+                                            110,
+                                            95,
+                                            80
                                         ],
                                         "scaling": [
                                             "self",
@@ -590,33 +656,33 @@
             ],
             "stats": {
                 "health": {
-                    "flat": 590,
+                    "flat": 570,
                     "percent": 0,
-                    "perLevel": 124,
+                    "perLevel": 101,
                     "percentPerLevel": 0
                 },
                 "healthRegen": {
-                    "flat": 6,
+                    "flat": 4,
                     "percent": 0,
-                    "perLevel": 0.9,
+                    "perLevel": 0.18,
                     "percentPerLevel": 0
                 },
                 "mana": {
-                    "flat": 320,
+                    "flat": 350,
                     "percent": 0,
-                    "perLevel": 50,
+                    "perLevel": 35,
                     "percentPerLevel": 0
                 },
                 "manaRegen": {
-                    "flat": 8,
+                    "flat": 8.18,
                     "percent": 0,
                     "perLevel": 0.7,
                     "percentPerLevel": 0
                 },
                 "armor": {
-                    "flat": 28,
+                    "flat": 27,
                     "percent": 0,
-                    "perLevel": 4.7,
+                    "perLevel": 4.2,
                     "percentPerLevel": 0
                 },
                 "magicResistance": {
@@ -626,13 +692,13 @@
                     "percentPerLevel": 0
                 },
                 "attackDamage": {
-                    "flat": 66,
+                    "flat": 58,
                     "percent": 0,
-                    "perLevel": 3.1,
+                    "perLevel": 2,
                     "percentPerLevel": 0
                 },
                 "attackRange": {
-                    "flat": 150,
+                    "flat": 225,
                     "percent": 0,
                     "perLevel": 0,
                     "percentPerLevel": 0
@@ -656,19 +722,19 @@
                     "percentPerLevel": 0
                 },
                 "attackSpeed": {
-                    "flat": 0.688,
+                    "flat": 0.697,
                     "percent": 0,
                     "perLevel": 0,
                     "percentPerLevel": 0
                 },
                 "attackSpeedBonus": {
-                    "flat": 0.625,
+                    "flat": 0.67,
                     "percent": 0,
                     "perLevel": 0,
-                    "percentPerLevel": 2.1
+                    "percentPerLevel": 3
                 },
                 "movementSpeed": {
-                    "flat": 335,
+                    "flat": 340,
                     "percent": 0,
                     "perLevel": 0,
                     "percentPerLevel": 0
